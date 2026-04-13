@@ -4,20 +4,22 @@ import Reviews from './components/Reviews';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ComingSoon from './components/ComingSoon';
 
 function App() {
   return (
     <div className="bg-off-white min-h-screen text-gray-800 font-sans selection:bg-sage-green selection:text-cream">
-      <Navbar />
+      {/* <Navbar /> */}
       
       <main>
-        <Hero />
+        <ComingSoon />
+        {/* <Hero />
         <Reviews />
         <Products />
-        <Contact />
+        <Contact /> */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

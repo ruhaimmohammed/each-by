@@ -1,17 +1,19 @@
 import { motion } from 'framer-motion';
 
+import powderImg from '../assets/images/powder.PNG';
+
 const products = [
   {
     id: 1,
     name: "Signature Cone",
     description: "Triple-sifted Rajasthani henna blended with eucalyptus and lavender for a deep, rich stain.",
-    image: "https://images.unsplash.com/photo-1620803558364-7711ab4b6040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: powderImg
   },
   {
     id: 2,
     name: "Bridal Blend",
     description: "Our luxury intensive mix designed specifically for brides, promising peak color within 48 hours.",
-    image: "https://images.unsplash.com/photo-1596755483980-041e12ea9a54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: powderImg
   }
 ];
 

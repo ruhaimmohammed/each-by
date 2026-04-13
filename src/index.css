@@ -16,7 +16,70 @@
     font-family: var(--font-sans);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-serif);
+  }
+}
+
+div,
+h1 {
+  font-family: "Amiri", serif;
+}
+
+.hero-title {
+  h1 {
+    letter-spacing: 1px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    background:
+      /* Grain / brushed texture */
+      repeating-linear-gradient(90deg,
+        rgba(255, 255, 255, 0.04) 0px,
+        rgba(0, 0, 0, 0.05) 1px,
+        rgba(255, 255, 255, 0.04) 2px),
+      /* Shine gradient */
+      linear-gradient(120deg,
+        #f7e7ce 0%,
+        #f0d9b5 20%,
+        #d4af7f 40%,
+        #fff4dc 50%,
+        #d4af7f 60%,
+        #f0d9b5 80%,
+        #f7e7ce 100%);
+
+    background-size: auto, 200% auto;
+    background-position: 0 0, -200% center;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: goldShine 3s linear infinite;
+  }
+
+  @keyframes goldShine {
+    100% {
+      background-position: 0 0, 200% center;
+    }
+  }
+}
+
+.hero-bg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../src/assets/images/image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  inset: 0;
+
+  @media (max-width: 768px) {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url("../src/assets/images/image-mweb.png");
   }
 }

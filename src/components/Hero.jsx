@@ -1,4 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
+import heroImg from '../assets/images/image.PNG';
+import heroLeftImg from '../assets/images/hero-left.png';
+
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -14,23 +17,35 @@ export default function Hero() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <div className="absolute inset-0 bg-black/30 z-10" /> 
+        <div className="absolute inset-0 bg-[#380402] z-10 hero-bg" />
         <img 
-          src="https://images.unsplash.com/photo-1596755483980-041e12ea9a54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+          src={""}
           alt="Organic Mehendi Art" 
           className="w-full h-full object-cover"
         />
       </motion.div>
 
+      {/* Hero Left Image Animation */}
+      {/* <motion.img
+        src={heroLeftImg}
+        alt="Hero graphic"
+        initial={{ x: "-100%" }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute left-0 top-0 h-screen w-auto object-cover z-[5] pointer-events-none"
+      /> */}
+
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-4 flex flex-col items-center">
+      <div className="relative z-10 text-center px-4 flex flex-col items-center hero-title">
         <motion.h1 
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
           className="text-7xl md:text-9xl font-serif text-cream drop-shadow-lg tracking-wider"
         >
-          Eachby
+          <button class="button-gold">
+  <span>Eachby</span>
+</button>
         </motion.h1>
         
         <motion.div
